@@ -1,25 +1,86 @@
 <!doctype html>
-<html>
-<head><title>Food Opinion Form</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Opinion Form</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-box {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #00796b;
+        }
+    </style>
+</head>
 <body>
-    <h2>Tell us your food preferences</h2>
-    <form method="post">
-        Favorite Cuisine:
-        <select name="cuisine" required>
-            <option value="Indian">Indian</option>
-            <option value="Italian">Italian</option>
-            <option value="Chinese">Chinese</option>
-            <option value="Mexican">Mexican</option>
-        </select><br><br>
-        Preferred Meal Time:
-        <select name="mealtime" required>
-            <option value="Breakfast">Breakfast</option>
-            <option value="Lunch">Lunch</option>
-            <option value="Dinner">Dinner</option>
-        </select><br><br>
-        Your Feedback:<br>
-        <textarea name="feedback" rows="4" cols="50" required></textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="form-box">
+        <h2>Food Preferences</h2>
+        <form method="post">
+            <label for="cuisine">Favorite Cuisine:</label>
+            <select name="cuisine" required>
+                <option value="">-- Select Cuisine --</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Mexican">Mexican</option>
+            </select>
+
+            <label for="mealtime">Preferred Meal Time:</label>
+            <select name="mealtime" required>
+                <option value="">-- Select Time --</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea name="feedback" rows="4" required placeholder="Write your thoughts..."></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
