@@ -1,20 +1,84 @@
-<form method="post">
-    <label>Favorite Cuisine:</label>
-    <select name="cuisine" required>
-        <option value="Indian">Indian</option>
-        <option value="Italian">Italian</option>
-        <option value="Mexican">Mexican</option>
-    </select>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Preferences</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    <label>Preferred Meal Time:</label>
-    <select name="mealtime" required>
-        <option value="Breakfast">Breakfast</option>
-        <option value="Lunch">Lunch</option>
-        <option value="Dinner">Dinner</option>
-    </select>
+        .form-container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 400px;
+        }
 
-    <label>Your Feedback:</label>
-    <textarea name="feedback" required></textarea>
+        h2 {
+            text-align: center;
+            color: #333;
+        }
 
-    <input type="submit" value="Submit">
-</form>
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        select, textarea, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #ff7e5f;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #eb6841;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Tell Us About Your Food Preferences</h2>
+        <form method="post">
+            <label for="cuisine">Favorite Cuisine:</label>
+            <select name="cuisine" id="cuisine" required>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Mexican">Mexican</option>
+            </select>
+
+            <label for="mealtime">Preferred Meal Time:</label>
+            <select name="mealtime" id="mealtime" required>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea name="feedback" id="feedback" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
