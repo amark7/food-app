@@ -1,39 +1,61 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Thank You!</title>
     <style>
         body {
-            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-            font-family: 'Segoe UI', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .thank-box {
+
+        .thank-you-box {
             background: white;
-            padding: 40px 30px;
+            padding: 30px 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             width: 400px;
         }
+
         h2 {
-            color: #333;
+            color: #ff7e5f;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 16px;
-            color: #444;
             margin: 10px 0;
+            color: #333;
         }
-        .highlight {
-            color: #ff5722;
+
+        .logout-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
             font-weight: bold;
-        }
-        a {
+            text-decoration: none;
             display: inline-block;
-            margin-top
+        }
+
+        .logout-btn:hover {
+            background-color: #eb6841;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-box">
+        <h2>Thank You for Your Input! 😊</h2>
+        <p><strong>Cuisine:</strong> {{ cuisine }}</p>
+        <p><strong>Meal Time:</strong> {{ mealtime }}</p>
+        <p><strong>Feedback:</strong> {{ feedback }}</p>
+        <a href="{{ url_fo_
