@@ -28,9 +28,12 @@ def food_form():
         cuisine = request.form.get('cuisine')
         mealtime = request.form.get('mealtime')
         feedback = request.form.get('feedback')
+
+        print("Form Data:", cuisine, mealtime, feedback)  # Debug line
         return render_template('thank_you.html', cuisine=cuisine, mealtime=mealtime, feedback=feedback)
 
     return render_template('food_form.html')
+
 
 
 @app.route('/logout')
@@ -39,5 +42,5 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    import os
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
