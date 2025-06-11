@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head><title>Food Opinion Form</title></head>
+<body>
+    <h2>Tell us your food preferences</h2>
+    <form method="post">
+        Favorite Cuisine:
+        <select name="cuisine" required>
+            <option value="Indian">Indian</option>
+            <option value="Italian">Italian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Mexican">Mexican</option>
+        </select><br><br>
+        Preferred Meal Time:
+        <select name="mealtime" required>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+        </select><br><br>
+        Your Feedback:<br>
+        <textarea name="feedback" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
