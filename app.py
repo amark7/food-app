@@ -25,11 +25,13 @@ def food_form():
         return redirect(url_for('login'))
 
     if request.method == 'POST':
-        cuisine = request.form['cuisine']
-        mealtime = request.form['mealtime']
-        feedback = request.form['feedback']
+        cuisine = request.form.get('cuisine')
+        mealtime = request.form.get('mealtime')
+        feedback = request.form.get('feedback')
         return render_template('thank_you.html', cuisine=cuisine, mealtime=mealtime, feedback=feedback)
+
     return render_template('food_form.html')
+
 
 @app.route('/logout')
 def logout():
