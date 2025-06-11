@@ -1,11 +1,39 @@
 <!doctype html>
-<html>
-<head><title>Thank You!</title></head>
-<body>
-    <h2>Thank you for your input!</h2>
-    <p><strong>Cuisine:</strong> {{ cuisine }}</p>
-    <p><strong>Meal Time:</strong> {{ mealtime }}</p>
-    <p><strong>Feedback:</strong> {{ feedback }}</p>
-    <a href="/logout">Logout</a>
-</body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You!</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .thank-box {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            color: #444;
+            margin: 10px 0;
+        }
+        .highlight {
+            color: #ff5722;
+            font-weight: bold;
+        }
+        a {
+            display: inline-block;
+            margin-top
